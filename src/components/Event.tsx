@@ -16,7 +16,7 @@ function Event(props: { event: any }) {
             <div className="flex-container">
 
                 <div className="left child">
-                    <a href={props.event.link} target="_blank">{props.event.name}</a>
+                    <a href={props.event.link} target="_blank" rel="noopener noreferrer">{props.event.name}</a>
 
                 </div>
 

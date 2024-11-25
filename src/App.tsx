@@ -5,32 +5,27 @@ import "@blueprintjs/core/lib/css/blueprint.css";
 // include blueprint-icons.css for icon font support
 import "@blueprintjs/icons/lib/css/blueprint-icons.css";
 import Event from "./components/Event";
-import axios from 'axios';
+import getEvents from "./api/Events";
+import Filters from "./components/Filters";
 
 
-
+let params = {};
 
 function App() {
     const [events, setEvents] = useState([]);
     useEffect(() => {
-        fetchEvents();
+        fetchEvents(params);
     }, []);
-    const fetchEvents = () => {
-        const params = {};
 
-        axios.get('http://192.168.88.167:8000/events', {params})
-            .then(response => {
-                setEvents(response.data);
-            })
-            .catch(error => {
-                console.error('There was an error fetching the events!', error);
-            });
+    const fetchEvents = (p: any) => {
+        getEvents(p, setEvents)
     };
 
 
     return (
         <div className="App">
 
+            <Filters/>
             <CardList>
                 {events.map((event, id) => (
                     <Event event={event} key={id}></Event>
