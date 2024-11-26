@@ -4,12 +4,12 @@ import "./DatePicker.css"
 
 import React, {useEffect, useRef, useState} from "react";
 
-interface DatePickerProps {
+interface Props {
     onSendData: (data: Date | Date[]) => void;
     range: boolean;
 }
 
-const DatePicker: React.FC<DatePickerProps> = (props: DatePickerProps) => {
+const DatePicker: React.FC<Props> = (props: Props) => {
     const datepickerRef = useRef<HTMLInputElement | null>(null);
     const datepicker = useRef<AirDatepicker | null>(null);
     const [selectedDates, setSelectedDates] = useState<Date | Date[]>([]);

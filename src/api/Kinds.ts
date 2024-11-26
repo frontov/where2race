@@ -1,7 +1,13 @@
-import get from "./API";
+import {get} from "./API";
 
-function getKinds(params: any, setKinds: Function) {
-    get('/kinds', params, setKinds);
+export interface Kind {
+    title: string;
+    name: string;
+}
+
+async function getKinds(params: any):Promise<Kind[]> {
+    let response = await get<Kind[]>('/kinds', params);
+    return response.data;
 }
 
 export default getKinds;

@@ -2,9 +2,8 @@ import axios from "axios";
 
 const URL = 'http://192.168.0.107:8000';
 
-
-function get(type : string, params: any, thenFunction: Function) {
-    axios.get(URL + type, {params})
+export function getAndThen(type: string, params: any, thenFunction: Function) {
+    get(type, params)
         .then(response => {
             thenFunction(response.data);
         })
@@ -13,5 +12,8 @@ function get(type : string, params: any, thenFunction: Function) {
         });
 }
 
+export function get<T>(type: string, params: any,) {
+    return axios.get<T>(URL + type, {params});
+}
 
-export default get;
+

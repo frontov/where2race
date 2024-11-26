@@ -24,7 +24,6 @@ function App() {
 
     return (
         <div className="App">
-
             <Filters/>
             <CardList>
                 {events.map((event, id) => (
