@@ -2,25 +2,27 @@ import AirDatepicker from "air-datepicker";
 import "air-datepicker/air-datepicker.css";
 import "./DatePicker.css"
 
-import React, {useEffect, useRef, useState} from "react";
+import React, {useEffect, useRef} from "react";
 
 interface Props {
-    onSendData: (data: Date | Date[]) => void;
+    onSendData: (data: Date[]) => void;
     range: boolean;
 }
 
 const DatePicker: React.FC<Props> = (props: Props) => {
     const datepickerRef = useRef<HTMLInputElement | null>(null);
     const datepicker = useRef<AirDatepicker | null>(null);
-    const [selectedDates, setSelectedDates] = useState<Date | Date[]>([]);
 
 
     useEffect(() => {
         if (datepickerRef.current) {
             datepicker.current = new AirDatepicker(datepickerRef.current, {
-                onSelect: ({date, formattedDate, datepicker}) => {
+                onSelect: ({date}) => {
                     // Update the state with the selected dates
-                    setSelectedDates(date);
+                    if (!Array.isArray(date)) {
+                        date = Array.of(date);
+                    }
+
                     props.onSendData(date);
                 },
 
@@ -39,14 +41,14 @@ const DatePicker: React.FC<Props> = (props: Props) => {
     }, []);
 
 
-    // useEffect(() => {
-    //     // Update if props are changed
-    //     datepicker.current?.update({...props});
-    // });
+    useEffect(() => {
+        // Update if props are changed
+        datepicker.current?.update({...props});
+    });
 
     return <input ref={datepickerRef}
                   className='date-picker'
-                  onChange={e => {
+                  onClick={e => {
                       console.log(e);
                   }}
 

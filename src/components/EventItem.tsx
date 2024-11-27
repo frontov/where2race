@@ -6,7 +6,7 @@ import React from "react";
 import Icon from "./Icon";
 
 
-function Event(props: { event: any }) {
+function EventItem(props: { event: any }) {
 
     return (
         <Card interactive={true} className="card">
@@ -34,4 +34,4 @@ function Event(props: { event: any }) {
 
 }
 
-export default Event;
+export default EventItem;

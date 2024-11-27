@@ -1,19 +1,17 @@
-import { Button, MenuItem } from "@blueprintjs/core";
-import { ItemRenderer, Select } from "@blueprintjs/select";
+import {Button, MenuItem} from "@blueprintjs/core";
+import {ItemRenderer, Select} from "@blueprintjs/select";
 import React from "react";
-import getKinds, {Kind} from "../../api/Kinds";
+import getKinds, {allKinds, Kind} from "../../api/Kinds";
 import {useEffect, useState} from "react";
+import "./kindSelect.css"
+import Icon from "../Icon";
 
 interface Props {
     onSendData: (kind: Kind) => void;
 }
 
-const allKinds: Kind = {
-    name: 'all',
-    title: 'Все'
-};
 
-const renderKind: ItemRenderer<Kind> = (kind, { handleClick, handleFocus, modifiers }) => {
+const renderKind: ItemRenderer<Kind> = (kind, {handleClick, handleFocus, modifiers}) => {
     if (!modifiers.matchesPredicate) {
         return null;
     }
@@ -21,12 +19,15 @@ const renderKind: ItemRenderer<Kind> = (kind, { handleClick, handleFocus, modifi
         <MenuItem
             active={modifiers.active}
             disabled={modifiers.disabled}
-            key={kind.title}
-            label={kind.title}
+            // key={kind.title}
+            // label={kind.title}
             onClick={handleClick}
             onFocus={handleFocus}
             roleStructure="listoption"
             text={kind.title}
+            icon={
+                <Icon name={kind.name} description={kind.title}/>
+            }
         />
     );
 };
@@ -69,9 +70,16 @@ const KindSelect: React.FC<Props> = (props: Props) => {
             itemRenderer={renderKind}
             // noResults={<MenuItem disabled={true} text="No results." roleStructure="listoption" />}
             onItemSelect={handleKind}
+            className="filter-elem select"
+
 
         >
-            <Button text={selectedKind?.title} rightIcon="double-caret-vertical" />
+            <Button text={selectedKind?.title}
+                    // icon={
+                    //     <Icon name={selectedKind ? selectedKind.name : 'other'}
+                    //           description={selectedKind ? selectedKind.name : 'other'}/>
+                    // }
+                    className="button"/>
         </Select>
     );
 };

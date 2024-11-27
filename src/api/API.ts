@@ -2,8 +2,8 @@ import axios from "axios";
 
 const URL = 'http://192.168.0.107:8000';
 
-export function getAndThen(type: string, params: any, thenFunction: Function) {
-    get(type, params)
+export function getAndThen<T>(type: string, params: any, thenFunction: Function) {
+    get<T>(type, params)
         .then(response => {
             thenFunction(response.data);
         })
