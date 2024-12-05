@@ -11,11 +11,10 @@ function Icon(props: { name: string, description: string }) {
     let icon = icons.get(name);
     return (
         <div>
-            <a href={"/" + name} title={description}>
-                <img src={icon}
-                     alt={description}
-                     title={description} width="30" height="30"/>
-            </a>
+            <img src={icon}
+                 // alt={description}
+                 // title={description}
+                 width="30" height="30"/>
         </div>
 
     );

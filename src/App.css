@@ -18,6 +18,12 @@
 .icon {
   width: 10%;
 }
+.App {
+  background-image: url(./gifs/snow4.gif);
+  /*background-size: auto,*/
+  height: 100vh;
+  background-color: #ffffff
+}
 
 .card:nth-child(even) {
   background-color: #e3f2fd; /* Синий цвет */

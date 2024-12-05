@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL = 'http://192.168.0.107:8000';
+const URL = 'https://cors-anywhere.herokuapp.com/http://213.159.77.147:8000';
 
 export function getAndThen<T>(type: string, params: any, thenFunction: Function) {
     get<T>(type, params)

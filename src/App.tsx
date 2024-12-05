@@ -66,7 +66,9 @@ function App() {
     };
 
     return (
-        <div className="App">
+        <div className="App"
+
+             >
             <Filters onSendData={handleFilter}/>
             <CardList>
                 {filteredEvents.map((event, id) => (
