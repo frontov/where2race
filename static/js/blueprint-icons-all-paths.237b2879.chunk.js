@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{95:function(n,t,r){"use strict";r.r(t),r.d(t,"getIconPaths",function(){return a}),r.d(t,"iconNameToPathsRecordKey",function(){return i});var c=r(87),o=r(93);r.d(t,"IconSvgPaths16",function(){return o});var e=r(94);r.d(t,"IconSvgPaths20",function(){return e});var u=r(6);function a(n,t){var r=Object(c.a)(n);return t===u.a.STANDARD?o[r]:e[r]}function i(n){return Object(c.a)(n)}}}]);
+//# sourceMappingURL=blueprint-icons-all-paths.237b2879.chunk.js.map
