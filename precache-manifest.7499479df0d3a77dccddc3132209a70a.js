@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a3769aff61c9c62eed84aedbd9f4dd95",
+    "revision": "e4bcde80f99a4606feb0474e607e6956",
     "url": "/where2race/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/where2race/static/css/7.f15294c3.chunk.css"
   },
   {
-    "revision": "538ee69f4f832439187a",
-    "url": "/where2race/static/css/main.bde6bc16.chunk.css"
+    "revision": "c46581648b87b9fce5b5",
+    "url": "/where2race/static/css/main.da8609bf.chunk.css"
   },
   {
     "revision": "5131e0c7a76935788165",
@@ -40,7 +40,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/where2race/static/js/blueprint-icons-split-paths-by-size-loader.8eed1894.chunk.js"
   },
   {
-    "revision": "538ee69f4f832439187a",
+    "revision": "c46581648b87b9fce5b5",
     "url": "/where2race/static/js/main.944a3bda.chunk.js"
   },
   {
