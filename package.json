@@ -2,7 +2,7 @@
   "name": "where2race",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://frontov.github.io/where2race",
+  "homepage": "https://where2race.ru",
   "dependencies": {
     "@blueprintjs/core": "^5.15.0",
     "@blueprintjs/datetime2": "^2.3.16",
@@ -28,7 +28,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build -b https://where2race.ru"
   },
   "eslintConfig": {
     "extends": [

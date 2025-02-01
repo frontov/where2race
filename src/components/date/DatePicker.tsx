@@ -46,13 +46,16 @@ const DatePicker: React.FC<Props> = (props: Props) => {
         datepicker.current?.update({...props});
     });
 
-    return <input ref={datepickerRef}
-                  className='date-picker'
-                  onClick={e => {
-                      console.log(e);
-                  }}
+    return <div className='date-picker-container'>
+        <label>когда?</label>
+        <input ref={datepickerRef}
+               className='date-picker'
+               onClick={e => {
+                   console.log(e);
+               }}
 
-    />;
+        />
+    </div>;
 }
 
 export default DatePicker;

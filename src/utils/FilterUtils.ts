@@ -2,7 +2,11 @@ import {allKinds, Kind} from "../api/Kinds";
 import {Event} from "../api/Events";
 
 const kindMatch = (kind: Kind, event: Event): boolean => {
-    return kind === allKinds ? true : event.kind.includes(kind.name);
+    return kind === allKinds
+        ?
+        !event.kind.includes('other')
+        :
+        event.kind.includes(kind.name)
 }
 
 const dateMatch = (dates: Date[], event: Event): boolean => {
@@ -19,9 +23,8 @@ const dateMatch = (dates: Date[], event: Event): boolean => {
 }
 
 const match = (dates: Date[], kind: Kind, event: Event): boolean => {
-    console.log("match")
-    console.log(dates)
-    return dateMatch(dates, event) && kindMatch(kind, event);
+    let res =  dateMatch(dates, event) && kindMatch(kind, event);
+    return res
 }
 
 const getTimestamp = (date: Date): number => {

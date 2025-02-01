@@ -1,6 +1,8 @@
 import {getAndThen} from "./API";
 
 function getEvents(params: any, setEvents: Function) {
+    console.log('params:')
+    console.log(params)
     getAndThen<Event>('/events', params, setEvents);
 }
 

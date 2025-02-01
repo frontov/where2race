@@ -4,7 +4,7 @@
     justify-content: center;
     width: 100%;
     height: fit-content;
-
+    margin-bottom: 20px;
 
 }
 .fit{
@@ -15,7 +15,7 @@
 
 
 .button {
-    margin: 10px;
+    margin-left: 10px;
     height: 40px;
 }
 
@@ -33,9 +33,13 @@
 }
 
 .card:nth-child(even) {
-    background-color: #e3f2fd; /* Синий цвет */
+    background-color: #E1FCFF; /* Синий цвет */
 }
 
 .card:nth-child(odd) {
-    background-color: #e8f5e9; /* Зеленый цвет */
+    background-color: #FFF3E1; /* Зеленый цвет */
+}
+.card:hover {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+
 }

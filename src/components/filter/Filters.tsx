@@ -34,9 +34,14 @@ const Filters: React.FC<Props> = (props: Props) => {
         <div className="filter-container">
             <DatePicker onSendData={handleDate} range={true}/>
             <KindSelect onSendData={handleKind}></KindSelect>
-            <Button text='go!'
+            <div>
+                <label>.</label>
+                <button
                     className="button fit"
-                    onClick={handleClick}></Button>
+                    onClick={handleClick}> go!
+                </button>
+
+            </div>
         </div>
     );
 };

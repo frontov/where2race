@@ -25,6 +25,7 @@ const renderKind: ItemRenderer<Kind> = (kind, {handleClick, handleFocus, modifie
             onFocus={handleFocus}
             roleStructure="listoption"
             text={kind.title}
+            key={kind.name}
             icon={
                 <Icon name={kind.name} description={kind.title}/>
             }
@@ -74,12 +75,13 @@ const KindSelect: React.FC<Props> = (props: Props) => {
 
 
         >
-            <Button text={selectedKind?.title}
+            <label>как?</label>
+            <button title={selectedKind?.title}
                     // icon={
                     //     <Icon name={selectedKind ? selectedKind.name : 'other'}
                     //           description={selectedKind ? selectedKind.name : 'other'}/>
                     // }
-                    className="button"/>
+                    className="button">{selectedKind?.title}</button>
         </Select>
     );
 };

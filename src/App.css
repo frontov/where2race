@@ -25,10 +25,3 @@
   background-color: #ffffff
 }
 
-.card:nth-child(even) {
-  background-color: #e3f2fd; /* Синий цвет */
-}
-
-.card:nth-child(odd) {
-  background-color: #e8f5e9; /* Зеленый цвет */
-}
