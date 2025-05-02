@@ -2,7 +2,7 @@ import axios from "axios";
 
 // const URL = 'http://localhost:8000';
 // const URL = 'https://cors-anywhere.herokuapp.com/http://213.159.77.147:8000';
-const URL = 'https://back.where2race.ru';
+const URL = 'https://api.where2race.ru:80';
 export function getAndThen<T>(type: string, params: any, thenFunction: Function) {
     get<T>(type, params)
         .then(response => {
